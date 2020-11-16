@@ -13,6 +13,12 @@
 		65499BF625618DE700C14DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65499BF425618DE700C14DD6 /* Main.storyboard */; };
 		65499BF825618DE900C14DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65499BF725618DE900C14DD6 /* Assets.xcassets */; };
 		65499BFB25618DE900C14DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65499BF925618DE900C14DD6 /* LaunchScreen.storyboard */; };
+		65499C0425618E2500C14DD6 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 65499C0325618E2500C14DD6 /* cards.json */; };
+		65499C0B25619E0500C14DD6 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C0A25619E0500C14DD6 /* Card.swift */; };
+		65499C0F2561A49600C14DD6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C0E2561A49600C14DD6 /* Game.swift */; };
+		65499C122561A50B00C14DD6 /* OverLord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C112561A50B00C14DD6 /* OverLord.swift */; };
+		65499C162561A59600C14DD6 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C152561A59600C14DD6 /* CardType.swift */; };
+		65499C192561A64400C14DD6 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C182561A64400C14DD6 /* Monster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,14 @@
 		65499BF725618DE900C14DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65499BFA25618DE900C14DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65499BFC25618DE900C14DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65499C0325618E2500C14DD6 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
+		65499C06256192F000C14DD6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		65499C07256192F100C14DD6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		65499C0A25619E0500C14DD6 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		65499C0E2561A49600C14DD6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		65499C112561A50B00C14DD6 /* OverLord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverLord.swift; sourceTree = "<group>"; };
+		65499C152561A59600C14DD6 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		65499C182561A64400C14DD6 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +70,10 @@
 		65499BED25618DE700C14DD6 /* Descent AI */ = {
 			isa = PBXGroup;
 			children = (
+				65499C0325618E2500C14DD6 /* cards.json */,
 				65499BEE25618DE700C14DD6 /* AppDelegate.swift */,
+				65499C142561A58300C14DD6 /* Enums */,
+				65499C0925619DE900C14DD6 /* Entities */,
 				65499BF025618DE700C14DD6 /* SceneDelegate.swift */,
 				65499BF225618DE700C14DD6 /* ViewController.swift */,
 				65499BF425618DE700C14DD6 /* Main.storyboard */,
@@ -65,6 +82,25 @@
 				65499BFC25618DE900C14DD6 /* Info.plist */,
 			);
 			path = "Descent AI";
+			sourceTree = "<group>";
+		};
+		65499C0925619DE900C14DD6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				65499C0A25619E0500C14DD6 /* Card.swift */,
+				65499C0E2561A49600C14DD6 /* Game.swift */,
+				65499C112561A50B00C14DD6 /* OverLord.swift */,
+				65499C182561A64400C14DD6 /* Monster.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		65499C142561A58300C14DD6 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				65499C152561A59600C14DD6 /* CardType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +144,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 65499BE225618DE600C14DD6;
 			productRefGroup = 65499BEC25618DE700C14DD6 /* Products */;
@@ -127,6 +164,7 @@
 				65499BFB25618DE900C14DD6 /* LaunchScreen.storyboard in Resources */,
 				65499BF825618DE900C14DD6 /* Assets.xcassets in Resources */,
 				65499BF625618DE700C14DD6 /* Main.storyboard in Resources */,
+				65499C0425618E2500C14DD6 /* cards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +175,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65499C192561A64400C14DD6 /* Monster.swift in Sources */,
 				65499BF325618DE700C14DD6 /* ViewController.swift in Sources */,
+				65499C0F2561A49600C14DD6 /* Game.swift in Sources */,
+				65499C122561A50B00C14DD6 /* OverLord.swift in Sources */,
+				65499C162561A59600C14DD6 /* CardType.swift in Sources */,
 				65499BEF25618DE700C14DD6 /* AppDelegate.swift in Sources */,
 				65499BF125618DE700C14DD6 /* SceneDelegate.swift in Sources */,
+				65499C0B25619E0500C14DD6 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +193,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				65499BF525618DE700C14DD6 /* Base */,
+				65499C06256192F000C14DD6 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -158,6 +202,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				65499BFA25618DE900C14DD6 /* Base */,
+				65499C07256192F100C14DD6 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -169,6 +214,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -230,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -296,7 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "es.jgferrer.Descent-AI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -315,7 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "es.jgferrer.Descent-AI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

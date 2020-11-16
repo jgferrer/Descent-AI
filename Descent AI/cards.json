@@ -1,0 +1,518 @@
+[
+    {
+    	"id": 1,
+    	"lang": "en",
+    	"play_cost": 2,
+    	"sell_cost": 1,
+    	"copies": 3,
+    	"type": "event",
+    	"name": "Aim",
+    	"text":	"Play immediately after declaring an attack but before rolling any dice. Your attack is an aimed attack."
+    },
+    {
+    	"id": 1,
+		"lang": "es",
+    	"play_cost": 2,
+    	"sell_cost": 1,
+    	"copies": 3,
+    	"type": "event",
+    	"name": "Apuntar",
+    	"text":	"Juega esta carta inmediatamente después de declarar un ataque, pero antes de tirar ningún dado. Tu ataque será un ataque apuntado."
+    },
+    {
+    	"id": 2,
+    	"lang": "en",
+    	"play_cost": 4,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "spawn",
+    	"name": "Bane Spider Swarm",
+    	"text":	"Play this card before activating any of your monsters for the turn. You may spawn 2 Bane Spiders and 1 Master Bane Spider, following all of the normal rules for spawning monsters."
+    },
+    {
+    	"id": 2,
+    	"lang": "es",
+    	"play_cost": 4,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "spawn",
+    	"name": "Plaga de Arañas ponzoñosas",
+    	"text":	"Juega esta carta antes de activar ninguno de tus monstruos en este turno. Puedes generar 2 Arañas ponzoñosas y 1 Araña ponzoñosa líder, siguiendo las reglas normales de generación de monstruos."
+    },
+    {
+    	"id": 3,
+    	"lang": "en",
+    	"play_cost": 4,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "spawn",
+    	"name": "Beastman War Party",
+    	"text":	"Play this card before activating any of your monsters for the turn. You may spawn 2 Beastmen and 1 Master Beastman, following all of the normal rules for spawning monsters."
+    },
+    {
+    	"id": 3,
+    	"lang": "es",
+    	"play_cost": 4,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "spawn",
+    	"name": "Hueste de guerra de Hombres bestia",
+    	"text":	"Juega esta carta antes de activar ninguno de tus monstruos en este turno. Puedes generar 2 Hombres bestia y 1 Hombre bestia líder, siguiendo las reglas normales de generación de monstruos."
+    },
+	{
+		"id": 4,
+    	"lang": "en",
+    	"play_cost": 17,
+    	"sell_cost": 5,
+    	"copies": 1,
+    	"type": "power",
+    	"name": "Brilliant Commander",
+    	"text":	"Play this card at the start of your turn and place it face up in front of you. When you reveal a new area, upgrade any 1 monster in that area to a master of that monster's type."
+    },
+    {
+    	"id": 4,
+    	"lang": "es",
+    	"play_cost": 17,
+    	"sell_cost": 5,
+    	"copies": 1,
+    	"type": "power",
+    	"name": "Líder brillante",
+    	"text":	"Juega esta carta al comienzo de tu turno y colócala boca arriba frente a ti. Cada vez que reveles una zona nueva, mejora 1 monstruo cualquiera de dicha zona a líder."
+    },
+    {
+    	"id": 5,
+    	"lang": "en",
+    	"play_cost": 4,
+    	"sell_cost": 1,
+    	"copies": 2,
+    	"type": "event",
+    	"name": "Charge",
+    	"text":	"Play when you activate a monster. Double the monster's speed for this activation."
+    },
+    {
+    	"id": 5,
+    	"lang": "es",
+    	"play_cost": 4,
+    	"sell_cost": 1,
+    	"copies": 2,
+    	"type": "event",
+    	"name": "Carga",
+    	"text":	"Juaga esta carta cuando actives un monstruo. La Velocidad de este monstruo durante su activació se duplica."
+    },
+    {
+    	"id": 6,
+    	"lang": "en",
+    	"play_cost": 7,
+    	"sell_cost": 3,
+    	"copies": 1,
+    	"type": "trap_space",
+    	"name": "Crushing Block",
+    	"text": "Play this card when a hero moves into an empty space that is not adjacent to any obstacles. Place a one space rubble token on that space. The hero suffers 4 wounds (ignoring armor), reduced by 1 wound for each surge he rolls on 4 power dice. Then, move the hero to an adjacent space of your choice."
+    },
+    {
+    	"id": 6,
+    	"lang": "es",
+    	"play_cost": 7,
+    	"sell_cost": 3,
+    	"copies": 1,
+    	"type": "trap_space",
+    	"name": "Bloque aplastante",
+    	"text": "Juega esta carta cuando un héroe entre en un espacio vacío que no esté adyacente a ningún obstáculo. Coloca en el una ficha de Escombros de un espacio. El héroe sufre 4 Heridas (que ignoran armadura), que se reducen en 1 Herida por cada incremento que obtenga al tirar 4 dados de Potencia. Luego mueve al héroe a un espacio adyacente de tu elección."
+    },
+    {
+    	"id": 7,
+    	"lang": "en",
+    	"play_cost": 11,
+    	"sell_cost": 4,
+    	"copies": 1,
+    	"type": "trap_chest",
+    	"name": "Curse of the Monkey God",
+    	"text": "Play this card when a hero opens a chest. The hero player must roll a power die. If he rolls blank, nothing happens. If he does not roll a blank, the hero is transformed into a monkey."
+    },
+    {
+    	"id": 7,
+    	"lang": "es",
+    	"play_cost": 11,
+    	"sell_cost": 4,
+    	"copies": 1,
+    	"type": "trap_chest",
+    	"name": "Maldición del Dios Mono",
+    	"text": "Juega esta carta cuando un héroe abra un Cofre. El jugador héroe debe tirar un dado de Potencia. Si saca una cara vacía, no curre nada. Si saca cualquier otra cosa se transforma en mono."
+    },
+    {
+    	"id": 8,
+    	"lang": "en",
+    	"play_cost": 8,
+    	"sell_cost": 2,
+    	"copies": 1,
+    	"type": "trap",
+    	"name": "Dark Charm",
+    	"text": "Play at the start of your turn and choose one hero. The chosen hero player must roll one power die. If the result is blank, nothing happens. If the result is not a blank, the hero must make one attack that you declare. This attack may target any hero, including the attacking hero, but is subject to the normal attack rules, including range and line of sight."
+    },
+    {
+    	"id": 8,
+    	"lang": "es",
+    	"play_cost": 8,
+    	"sell_cost": 2,
+    	"copies": 1,
+    	"type": "trap",
+    	"name": "Seducción oscura",
+    	"text": "Juega esta carta al comienzo de tu turno y elige a un héroe. Su jugador tendrá que tirar un dado de Potencia. Si saca una cara vacía, no ocurre nada. Si el resultado es otro, el héroe deberá efectuar un ataque a tu elección. Puede atacar a cualquier héroe (incluido a sí mismo), pero siguiendo las reglas normales de combate, incluidos alcance y línea de visión."
+    },
+    {
+    	"id": 9,
+    	"lang": "en",
+    	"play_cost": 2,
+    	"sell_cost": 1,
+    	"copies": 3,
+    	"type": "event",
+    	"name": "Dodge",
+    	"text":	"Play after a hero has attacked a monster. The monster dodges the attack."
+    },
+    {
+    	"id": 9,
+    	"lang": "es",
+    	"play_cost": 2,
+    	"sell_cost": 1,
+    	"copies": 3,
+    	"type": "event",
+    	"name": "Esquivar",
+    	"text":	"Juega esta carta después de que un héroe haya atacado a un monstruo. El monstruo esquiva el ataque (por lo que puedes obligar al jugador héroe a repetir su tirada)."
+    },
+    {
+    	"id": 10,
+    	"lang": "en",
+    	"play_cost": 20,
+    	"sell_cost": 5,
+    	"copies": 1,
+    	"type": "power",
+    	"name": "DOOM!",
+    	"text":	"Play this card at the start of your turn and place it face up in front of you. All of your monsters roll 1 extra power die when attacking."
+    },
+    {
+    	"id": 10,
+    	"lang": "es",
+    	"play_cost": 20,
+    	"sell_cost": 5,
+    	"copies": 1,
+    	"type": "power",
+    	"name": "¡Fatalidad!",
+    	"text":	"Juega esta carta al comienzo de tu turnoy colócala boca arriba frente a ti. Todos tus monstruos tiran 1 dado de Potencia adicional al atacar."
+    },
+	{
+		"id": 11,
+    	"lang": "en",
+    	"play_cost": 25,
+    	"sell_cost": 5,
+    	"copies": 1,
+    	"type": "power",
+    	"name": "Evil Genius",
+    	"text":	"Play this card at the start of your turn and place it face up in front of you. Draw 1 extra overlord card each turn."
+    },
+	{
+		"id": 11,
+    	"lang": "es",
+    	"play_cost": 25,
+    	"sell_cost": 5,
+    	"copies": 1,
+    	"type": "power",
+    	"name": "Genio maligno",
+    	"text":	"Juega esta carta al comienzo de tu turno y colócala boca arriba frente a ti. Cada turno podrás robar 1 carta adicional de Señor Supremo."
+    },
+    {
+    	"id": 12,
+    	"lang": "en",
+    	"play_cost": 9,
+    	"sell_cost": 3,
+    	"copies": 1,
+    	"type": "trap_door",
+    	"name": "Explosive Door",
+    	"text": "Play this card when a hero opens a door. Every hero adjacent to the door suffers 4 wounds (ignoring armor). Each affected hero may roll 4 power dice and reduce the effect by 1 wound for each surge he rolls."
+    },
+    {
+    	"id": 12,
+    	"lang": "es",
+    	"play_cost": 9,
+    	"sell_cost": 3,
+    	"copies": 1,
+    	"type": "trap_door",
+    	"name": "Puerta explosiva",
+    	"text": "Juega esta carta cuando un héroe abra una puerta. Todo héroe que esté adyacente a dicha puerta sufre 4 Heridas (se ignora la Armadura). Cada héroe afectado podrá tirar 4 dados de Potencia y reducir el efecto en 1 Herida por cada incremento que obtenga."
+    },
+    {
+    	"id": 13,
+    	"lang": "en",
+    	"play_cost": 12,
+    	"sell_cost": 4,
+    	"copies": 1,
+    	"type": "trap_chest",
+    	"name": "Explosive Rune",
+    	"text": "Play this card when a hero opens a chest. The hero that opened the chest, as well as every hero adjacent to the chest, suffers 6 wounds (ignoring armor). Each affected hero may roll 3 power dice and reduce the effect by 2 wounds for each surge he rolls."
+    },
+    {
+    	"id": 13,
+    	"lang": "es",
+    	"play_cost": 12,
+    	"sell_cost": 4,
+    	"copies": 1,
+    	"type": "trap_chest",
+    	"name": "Runa explosiva",
+    	"text": "Juega esta carta cuando un héroe abra un cofre. Todo héroe que esté adyacente a dicho cofre sufre 6 Heridas (se ignora la Armadura). Cada héroe afectado podrá tirar 3 dados de Potencia y reducir el efecto en 2 Heridas por cada incremento que obtenga."
+    },
+    {
+    	"id": 14,
+    	"lang": "en",
+    	"play_cost": 6,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "event",
+    	"name": "Gust of Winds",
+    	"text":	"Play at the start of your turn. Until the start of your next turn, the heroes' torches are blown out and they cannot trace line of sight farther than 5 spaces away. This card does not affect monsters' line of sight."
+    },
+    {
+    	"id": 14,
+    	"lang": "es",
+    	"play_cost": 6,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "event",
+    	"name": "Esquivar",
+    	"text":	"Juega esta carta al comienzo de tu turno. Hasta el comienzo de tu próximo turno, las antorchas de loas héroes se apagan y no podrán trazar línea de visión más de 5 espacios de distancia. Esta carta no afecta a la línea de visión de los monstruos."
+    },
+    {
+    	"id": 15,
+    	"lang": "en",
+    	"play_cost": 5,
+    	"sell_cost": 2,
+    	"copies": 1,
+    	"type": "spawn",
+    	"name": "Hell Hound Pack",
+    	"text":	"Play this card before activating any of your monsters for the turn. You may spawn 2 Hell Hounds, following all of the normal rules for spawning monsters."
+    },
+    {
+    	"id": 15,
+    	"lang": "es",
+    	"play_cost": 5,
+    	"sell_cost": 2,
+    	"copies": 1,
+    	"type": "spawn",
+    	"name": "Plaga de Arañas ponzoñosas",
+    	"text":	"Juega esta carta antes de activar ninguno de tus monstruos en este turno. Puedes generar 2 Sabuesos infernales, siguiendo las reglas normales de generación de monstruos."
+    },
+    {
+    	"id": 16,
+    	"lang": "en",
+    	"play_cost": 18,
+    	"sell_cost": 5,
+    	"copies": 2,
+    	"type": "power",
+    	"name": "Hordes of the Things",
+    	"text":	"Play this card at the start of your turn and place it face up in front of you. When you reveal a new area, place your choice of: 2 extra Beastmen, 2 extra Skeletons, or 2 extra Bane Spiders adjacent to any other monster in the revealed area."
+    },
+	{
+		"id": 16,
+    	"lang": "es",
+    	"play_cost": 25,
+    	"sell_cost": 5,
+    	"copies": 2,
+    	"type": "power",
+    	"name": "Genio maligno",
+    	"text":	"Juega esta carta al comienzo de tu turno y colócala boca arriba frente a ti. Cuando reveles una nueva zona, puedes elegir entre colocar 2 Hombres bestia adicionales, 2 Esqueletos adicionales o 2 Arañas ponzoñosas adicionales en un espacio adyacente a cualquier otro monstruo que haya en la zona."
+    },
+    {
+    	"id": 17,
+    	"lang": "en",
+    	"play_cost": 8,
+    	"sell_cost": 3,
+    	"copies": 1,
+    	"type": "trap_chest",
+    	"name": "Mimic",
+    	"text": "Pay this card when a hero opens a chest. The chest is alive, and its contents cannot be distributed until it is killed. Move the chest marker to an adjacent space. Threat it as a Beastman and activate it immediately. After its activation, the hero's turn resumes. If the chest is killed, the contents of the chest are immediately distributed."
+    },
+    {
+    	"id": 17,
+    	"lang": "es",
+    	"play_cost": 8,
+    	"sell_cost": 3,
+    	"copies": 1,
+    	"type": "trap_chest",
+    	"name": "Imitador",
+    	"text": "Juega esta carta cuando un héroe abra un cofre. Este Cofre está vivo, y su contenido no puede tomarse hasta que muera. Mueve el indicador de Cofre a un espacio adyacente. Trátalo como si fuera un Hombre bestia, y actívalo de inmediato. Después de su activación, continúa el turno del héroe. Si matan al Cofre, su contenido se reparte de inmediato."
+    },
+    {
+    	"id": 18,
+    	"lang": "en",
+    	"play_cost": 5,
+    	"sell_cost": 3,
+    	"copies": 1,
+    	"type": "trap_door",
+    	"name": "Paralyzing Gas",
+    	"text": "Play this card when a hero opens a door. Unless the hero rolls a blank on one power die, his turn immediately ends and you may place one stun token on him. If the hero player rolls a blank, this card has no effect."
+    },
+    {
+    	"id": 18,
+    	"lang": "es",
+    	"play_cost": 5,
+    	"sell_cost": 3,
+    	"copies": 1,
+    	"type": "trap_door",
+    	"name": "Gas paralizante",
+    	"text": "Juega esta carta cuando un héroe abra una puerta. A no ser que el héroe consiga sacar una cara vacía all tirar 1 dado de Potencia, su turno termina de inmediato y puedes colocar sobre él una ficha de Aturdimiento. Si el jugador héroe saca una cara vacía en el dado, esta carta no surte efecto."
+    },
+    {
+    	"id": 19,
+    	"lang": "en",
+    	"play_cost": 4,
+    	"sell_cost": 1,
+    	"copies": 2,
+    	"type": "event",
+    	"name": "Rage",
+    	"text":	"Play when you activate a monster. The monster may attack twice during this activation (four times if it has Quick Shot)."
+    },
+    {
+    	"id": 19,
+    	"lang": "es",
+    	"play_cost": 4,
+    	"sell_cost": 1,
+    	"copies": 2,
+    	"type": "event",
+    	"name": "Furia",
+    	"text":	"Juega esta carta cuando actives un monstruo. Dicho monstruo podrá atacar dos veces durante su activación (cuatro veces si posee la capacidad Disparo rápido). Esta carta no puede usarse varias veces sobre el mismo monstruo."
+    },
+    {
+    	"id": 20,
+    	"lang": "en",
+    	"play_cost": 5,
+    	"sell_cost": 2,
+    	"copies": 1,
+    	"type": "spawn",
+    	"name": "Razorwing Flock",
+    	"text":	"Play this card before activating any of your monsters for the turn. You may spawn 2 Razorwings, following all of the normal rules for spawning monsters."
+    },
+    {
+    	"id": 20,
+    	"lang": "es",
+    	"play_cost": 5,
+    	"sell_cost": 2,
+    	"copies": 1,
+    	"type": "spawn",
+    	"name": "Bandada de Alascortantes",
+    	"text":	"Juega esta carta antes de activar ninguno de tus monstruos en este turno. Puedes generar 2 Alascortantes, siguiendo las reglas normales de generación de monstruos."
+    },
+    {
+    	"id": 21,
+    	"lang": "en",
+    	"play_cost": 4,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "spawn",
+    	"name": "Skeleton Patrol",
+    	"text":	"Play this card before activating any of your monsters for the turn. You may spawn 2 Skeletons and 1 Master Skeleton, following all of the normal rules for spawning monsters."
+    },
+    {
+    	"id": 21,
+    	"lang": "es",
+    	"play_cost": 4,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "spawn",
+    	"name": "Patrulla de esqueletos",
+    	"text":	"Juega esta carta antes de activar ninguno de tus monstruos en este turno. Puedes generar 2 Esqueletos y 1 Esqueleto líder, siguiendo las reglas normales de generación de monstruos."
+    },
+    {
+    	"id": 22,
+    	"lang": "en",
+    	"play_cost": 5,
+    	"sell_cost": 2,
+    	"copies": 1,
+    	"type": "spawn",
+    	"name": "Sorcerer Circle",
+    	"text":	"Play this card before activating any of your monsters for the turn. You may spawn 2 Sorcerers, following all of the normal rules for spawning monsters."
+    },
+    {
+    	"id": 22,
+    	"lang": "es",
+    	"play_cost": 5,
+    	"sell_cost": 2,
+    	"copies": 1,
+    	"type": "spawn",
+    	"name": "Círculo de Hechiceros",
+    	"text":	"Juega esta carta antes de activar ninguno de tus monstruos en este turno. Puedes generar 2 Hechiceros, siguiendo las reglas normales de generación de monstruos."
+    },
+    {
+    	"id": 23,
+    	"lang": "en",
+    	"play_cost": 3,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "trap_space",
+    	"name": "Spiked Pit",
+    	"text": "Play this card when a hero moves into an empty space. Place a one space pit token on that space. Unless the hero rolls a blank on one power die, he falls into the pit and suffers 2 wounds (ignoring armor). If the hero rolls a blank, the hero immediately moves to an adjacent space of his choice."
+    },
+    {
+    	"id": 23,
+    	"lang": "es",
+    	"play_cost": 3,
+    	"sell_cost": 2,
+    	"copies": 2,
+    	"type": "trap_space",
+    	"name": "Foso con pinchos",
+    	"text": "Juega esta carta cuando un héroe entre en un espacio vacío. Coloca en el una ficha de Foso de un espacio. A no ser que el héroe consiga sacar una cara vacía al tirar 1 dado de Potencia, cae al Foso y sufre 2 Heridas (se ignora la Armadura). Si el héroe saca una cara vacía, se mueve inmediatamente a un espacio adyacente de su elección."
+    },
+    {
+    	"id": 24,
+    	"lang": "en",
+    	"play_cost": 16,
+    	"sell_cost": 5,
+    	"copies": 1,
+    	"type": "power",
+    	"name": "Trapmaster",
+    	"text":	"Play this card at the start of your turn and place it face up in front of you. Lower the threat cost of the Trap cards you play by 1. Trap cards that deal damage deal an additional 2 wounds."
+    },
+	{
+		"id": 24,
+    	"lang": "es",
+    	"play_cost": 16,
+    	"sell_cost": 5,
+    	"copies": 1,
+    	"type": "power",
+    	"name": "Maestro de trampas",
+    	"text":	"Juega esta carta al comienzo de tu turno y colócala boca arriba frente a ti. Reduce en 1 el gasto de Amenaza de todas las cartas de Trampa que juegues. Las cartas de Trampa que inflinjan daño causarán 2 Heridas adicionales."
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
