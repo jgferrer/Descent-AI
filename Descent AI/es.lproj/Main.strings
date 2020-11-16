@@ -1,4 +1,12 @@
 
-/* Class = "UIButton"; normalTitle = "NEW GAME"; ObjectID = "0gv-qa-7BD"; */
-"0gv-qa-7BD.normalTitle" = "Partida nueva";
-"ItS-eH-tb5.text" = "Continuar";
+/* Class = "UIButton"; normalTitle = "New game"; ObjectID = "0gv-qa-7BD"; */
+"0gv-qa-7BD.normalTitle" = "Nueva partida";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "ItS-eH-tb5"; */
+"ItS-eH-tb5.normalTitle" = "Continuar";
+
+/* Class = "UIButton"; normalTitle = "Back to main menu"; ObjectID = "Qmh-Da-yEf"; */
+"Qmh-Da-yEf.normalTitle" = "Volver al menú principal";
+
+/* Class = "UILabel"; text = "Which Quest will you play?"; ObjectID = "jCW-rV-cmd"; */
+"jCW-rV-cmd.text" = "¿Qué Aventura deseas jugar?";
