@@ -9,6 +9,7 @@ import Foundation
 
 struct Quest: Decodable, Encodable {
     let quest_id: String;
+    let lang: String;
     let name: String;
     let sceneback: String;
     let missgoal: String;

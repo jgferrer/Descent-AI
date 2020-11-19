@@ -7,9 +7,10 @@
 
 import UIKit
 
-class SelectQuestController: UIViewController {
+class SelectQuestController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var overLord = OverLord()
+    var quests = [Quest]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +22,7 @@ class SelectQuestController: UIViewController {
             for url in myURLs{
                 let data = try! Data(contentsOf: url)
                 let quest = try! JSONDecoder().decode(Quest.self, from: data)
-                //print(String(decoding: data, as: UTF8.self))
-                print(quest.name)
-                for chest in quest.chests{
-                    if chest.type == ChestType.Cooper.rawValue {
-                        print(chest.type, " - ", chest.num, " ", chest.content)
-                    }
-                    if chest.type == ChestType.Silver.rawValue {
-                        print(chest.type, " - ", chest.num, " ", chest.content)
-                    }
-                }
+                quests.append(quest)
             }
         }
     }
@@ -39,4 +31,17 @@ class SelectQuestController: UIViewController {
         guard let fURL = Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: "Quests") else { return nil }
         return fURL
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return quests.count
+    }
+     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestCell", for: indexPath) as! QuestTableViewCell
+        cell.labelQuestName.text = quests[indexPath.row].name
+        cell.imgQuest.image = UIImage(named: "quest-icon")
+        cell.langQuest.image = UIImage(named: quests[indexPath.row].lang)
+        return cell
+    }
+    
 }
