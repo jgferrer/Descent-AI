@@ -1,0 +1,61 @@
+{
+    "quest_id": "La_cueva_perdida",
+    "lang": "es",
+    "estimated_duration": "90 min",
+    "recomended_players": "1-4",
+    "name": "La cueva perdida",
+    "sceneback": "De vuelta a casa decides tomar un atajo ya que el camino principal está repleto de carruajes que se dirigen a la fiesta del rey. Al tercer día, encuentras un rastro de grandes huellas que se dirigen hacia las colinas. La curiosidad se apodera de ti y sigues las huellas a través de unos senderos hasta llegar a un pequeño valle. El sendero termina en la entrada de una cueva oscura. Entras con cuidado...",
+    "missgoal": "Los héroes deben explorar por completo la cueva y derrotar al enemigo final.\nLos héroes empiezan con 3 fichas de Conquista.",
+    "chests": [
+            {
+                "type": "Cooper",
+                "num": 1,
+                "content": "1 Treasure, 3 Conquest"
+            },
+            {
+                "type": "Cooper",
+                "num": 2,
+                "content": "1 Treasure, 100 Coins"
+            },
+            {
+                "type": "Cooper",
+                "num": 3,
+                "content": "2 Treasures, 100 Coins, 1 Curse"
+            },
+            {
+                "type": "Silver",
+                "num": 1,
+                "content": "1 Treasure, 3 Conquest"
+            },
+            {
+                "type": "Silver",
+                "num": 2,
+                "content": "1 Treasure, 100 Coins"
+            },
+            {
+                "type": "Silver",
+                "num": 3,
+                "content": "2 Treasures, 100 Coins, 1 Curse"
+            }
+    ],
+    "rooms": [
+        {
+            "room": 0,
+            "map_image_name": "A_Cave_in_the_Wild#0.jpg",
+            "initial_text": "This is the Starting Area."
+        },
+        {
+            "room": 1,
+            "map_image_name": "A_Cave_in_the_Wild#1.jpg",
+            "initial_text": "As you open the door you hear growling and the shuffle of feet.  Your torches illuminate a natural cavern to reveal what appears to be crude living quarters.  Piles of junk lie strewn about the room.  The smell of wet dog and burnt hair assails your nostrils.",
+            "encounter_text": "You rummage through a particularly large and smelly pile of rubbish.  Amist the rotting food and decay you discover a Healing Potion."
+        },
+        {
+            "room": 3,
+            "map_image_name": "A_Cave_in_the_Wild#3.jpg",
+            "initial_text": "You unlock the door and pull it open to reveal an even more pungent stench.  Bones lie scattered here and there in this large natrual cavern. A large Ogre loks up from its current meal (A half devoured sheep) and glares at you with intent."
+        }
+    ],
+    "lose_text": "You lose...",
+    "win_text": "You win!"
+}

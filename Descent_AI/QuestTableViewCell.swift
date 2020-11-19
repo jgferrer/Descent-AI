@@ -10,6 +10,7 @@ import UIKit
 class QuestTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelQuestName: UILabel!
+    @IBOutlet weak var labelExtraInfoQuest: UILabel!
     @IBOutlet weak var imgQuest: UIImageView!
     @IBOutlet weak var langQuest: UIImageView!
     

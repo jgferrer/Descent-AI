@@ -11,10 +11,10 @@ class SelectQuestController: UIViewController, UITableViewDelegate, UITableViewD
     
     var overLord = OverLord()
     var quests = [Quest]()
+    @IBOutlet weak var questDescription: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         overLord.init_deck()
         overLord.init_hand()
         
@@ -33,15 +33,28 @@ class SelectQuestController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableView.layer.borderColor = UIColor.gray.cgColor
+        tableView.layer.borderWidth = 1.0
         return quests.count
     }
      
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestCell", for: indexPath) as! QuestTableViewCell
         cell.labelQuestName.text = quests[indexPath.row].name
+        cell.labelExtraInfoQuest.text = NSLocalizedString("Duration: ", comment: "Quest Estimated Duration") + quests[indexPath.row].estimated_duration + NSLocalizedString(" - Heroes: ", comment: "Number of Heroes") + quests[indexPath.row].recomended_players
         cell.imgQuest.image = UIImage(named: "quest-icon")
-        cell.langQuest.image = UIImage(named: quests[indexPath.row].lang)
+        if (quests[indexPath.row].lang != "") {
+            cell.langQuest.image = UIImage(named: quests[indexPath.row].lang)
+        }
+        else {
+            cell.langQuest.image = UIImage(named: "en")
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedQuest = quests[indexPath.row]
+        questDescription.text = selectedQuest.sceneback + "\n\n" + selectedQuest.missgoal
     }
     
 }
