@@ -24,7 +24,7 @@
                                     <segue destination="E5M-yJ-huO" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="3of-0a-Z76"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItS-eH-tb5">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItS-eH-tb5">
                                 <rect key="frame" x="447.5" y="579" width="129" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
@@ -184,6 +184,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="tfq-XD-eVc" id="tOd-Kd-bZb"/>
                         <outlet property="questDescription" destination="stm-ws-Cbe" id="LrE-1f-0zJ"/>
                     </connections>
                 </viewController>

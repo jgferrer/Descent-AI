@@ -12,11 +12,14 @@ class SelectQuestController: UIViewController, UITableViewDelegate, UITableViewD
     var overLord = OverLord()
     var quests = [Quest]()
     @IBOutlet weak var questDescription: UITextView!
+    @IBOutlet weak var playButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         overLord.init_deck()
         overLord.init_hand()
+        
+        playButton.isEnabled = false;
         
         if let myURLs = getAllQuests() {
             for url in myURLs{
@@ -55,6 +58,7 @@ class SelectQuestController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedQuest = quests[indexPath.row]
         questDescription.text = selectedQuest.sceneback + "\n\n" + selectedQuest.missgoal
+        playButton.isEnabled = true;
     }
     
 }
