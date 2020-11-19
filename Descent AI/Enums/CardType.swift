@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum CardType {
-    case event
-    case spawn
-    case power
-    case trap_door
-    case trap_space
-    case trap_chest
-    case trap
+enum CardType: String {
+    case event = "event"
+    case spawn = "spawn"
+    case power = "power"
+    case trap_door = "trap_door"
+    case trap_space = "trap_space"
+    case trap_chest = "trap_chest"
+    case trap = "trap"
 }

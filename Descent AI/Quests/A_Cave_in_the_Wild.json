@@ -1,0 +1,58 @@
+{
+    "quest_id": "A_Cave_in_the_Wild",
+    "name": "A Cave in the Wild",
+    "sceneback": "As time was a luxury you decided to travel across land rather than use the King's Highway.  On the third day out you foud a trail of large footprints heading up in to the hills.  Curiosity got the better of you and followed the ttracks over the hills and into a small valley below.  The trail ends at the entrance to a dark cave.  You tentatively step inside.",
+    "missgoal": "Players are required to defeat the master Ogre in Area 2.\nPlayers start with 3 Conquest Tokens.",
+    "chests": [
+            {
+                "type": "Cooper",
+                "num": 1,
+                "content": "1 Treasure, 3 Conquest"
+            },
+            {
+                "type": "Cooper",
+                "num": 2,
+                "content": "1 Treasure, 100 Coins"
+            },
+            {
+                "type": "Cooper",
+                "num": 3,
+                "content": "2 Treasures, 100 Coins, 1 Curse"
+            },
+            {
+                "type": "Silver",
+                "num": 1,
+                "content": "1 Treasure, 3 Conquest"
+            },
+            {
+                "type": "Silver",
+                "num": 2,
+                "content": "1 Treasure, 100 Coins"
+            },
+            {
+                "type": "Silver",
+                "num": 3,
+                "content": "2 Treasures, 100 Coins, 1 Curse"
+            }
+    ],
+    "rooms": [
+        {
+            "room": 0,
+            "map_image_name": "A_Cave_in_the_Wild#0.jpg",
+            "initial_text": "This is the Starting Area."
+        },
+        {
+            "room": 1,
+            "map_image_name": "A_Cave_in_the_Wild#1.jpg",
+            "initial_text": "As you open the door you hear growling and the shuffle of feet.  Your torches illuminate a natural cavern to reveal what appears to be crude living quarters.  Piles of junk lie strewn about the room.  The smell of wet dog and burnt hair assails your nostrils.",
+            "encounter_text": "You rummage through a particularly large and smelly pile of rubbish.  Amist the rotting food and decay you discover a Healing Potion."
+        },
+        {
+            "room": 3,
+            "map_image_name": "A_Cave_in_the_Wild#3.jpg",
+            "initial_text": "You unlock the door and pull it open to reveal an even more pungent stench.  Bones lie scattered here and there in this large natrual cavern. A large Ogre loks up from its current meal (A half devoured sheep) and glares at you with intent."
+        }
+    ],
+    "lose_text": "You lose...",
+    "win_text": "You win!"
+}

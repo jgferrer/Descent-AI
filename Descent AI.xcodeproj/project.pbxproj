@@ -19,7 +19,11 @@
 		65499C122561A50B00C14DD6 /* OverLord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C112561A50B00C14DD6 /* OverLord.swift */; };
 		65499C162561A59600C14DD6 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C152561A59600C14DD6 /* CardType.swift */; };
 		65499C192561A64400C14DD6 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C182561A64400C14DD6 /* Monster.swift */; };
+		65A4DDC82565A9F500F03C86 /* Quests in Resources */ = {isa = PBXBuildFile; fileRef = 65A4DDC72565A9F500F03C86 /* Quests */; };
+		65A4DDCC2565AD0F00F03C86 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4DDCB2565AD0F00F03C86 /* Quest.swift */; };
+		65A4DDCF2565AF5200F03C86 /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4DDCE2565AF5200F03C86 /* Chest.swift */; };
 		65AAAC41256309040068D20C /* SelectQuestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AAAC40256309040068D20C /* SelectQuestController.swift */; };
+		65C46D432566627700B82911 /* ChestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C46D422566627700B82911 /* ChestType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +42,12 @@
 		65499C112561A50B00C14DD6 /* OverLord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverLord.swift; sourceTree = "<group>"; };
 		65499C152561A59600C14DD6 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		65499C182561A64400C14DD6 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		65A4DDC72565A9F500F03C86 /* Quests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Quests; sourceTree = "<group>"; };
+		65A4DDCB2565AD0F00F03C86 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		65A4DDCE2565AF5200F03C86 /* Chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
 		65AAAC3E2563081E0068D20C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		65AAAC40256309040068D20C /* SelectQuestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestController.swift; sourceTree = "<group>"; };
+		65C46D422566627700B82911 /* ChestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 			children = (
 				65499C0325618E2500C14DD6 /* cards.json */,
 				65499BEE25618DE700C14DD6 /* AppDelegate.swift */,
+				65A4DDC72565A9F500F03C86 /* Quests */,
 				65AAAC3B256302AB0068D20C /* Controllers */,
 				65499C142561A58300C14DD6 /* Enums */,
 				65499C0925619DE900C14DD6 /* Entities */,
@@ -94,6 +103,8 @@
 				65499C0E2561A49600C14DD6 /* Game.swift */,
 				65499C112561A50B00C14DD6 /* OverLord.swift */,
 				65499C182561A64400C14DD6 /* Monster.swift */,
+				65A4DDCB2565AD0F00F03C86 /* Quest.swift */,
+				65A4DDCE2565AF5200F03C86 /* Chest.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -102,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				65499C152561A59600C14DD6 /* CardType.swift */,
+				65C46D422566627700B82911 /* ChestType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -172,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A4DDC82565A9F500F03C86 /* Quests in Resources */,
 				65499BFB25618DE900C14DD6 /* LaunchScreen.storyboard in Resources */,
 				65499BF825618DE900C14DD6 /* Assets.xcassets in Resources */,
 				65499BF625618DE700C14DD6 /* Main.storyboard in Resources */,
@@ -186,11 +199,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A4DDCF2565AF5200F03C86 /* Chest.swift in Sources */,
+				65A4DDCC2565AD0F00F03C86 /* Quest.swift in Sources */,
 				65499C192561A64400C14DD6 /* Monster.swift in Sources */,
 				65499BF325618DE700C14DD6 /* MainMenuController.swift in Sources */,
 				65499C0F2561A49600C14DD6 /* Game.swift in Sources */,
 				65499C122561A50B00C14DD6 /* OverLord.swift in Sources */,
 				65499C162561A59600C14DD6 /* CardType.swift in Sources */,
+				65C46D432566627700B82911 /* ChestType.swift in Sources */,
 				65AAAC41256309040068D20C /* SelectQuestController.swift in Sources */,
 				65499BEF25618DE700C14DD6 /* AppDelegate.swift in Sources */,
 				65499BF125618DE700C14DD6 /* SceneDelegate.swift in Sources */,
