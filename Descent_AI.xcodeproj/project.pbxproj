@@ -19,6 +19,7 @@
 		65499C122561A50B00C14DD6 /* OverLord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C112561A50B00C14DD6 /* OverLord.swift */; };
 		65499C162561A59600C14DD6 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C152561A59600C14DD6 /* CardType.swift */; };
 		65499C192561A64400C14DD6 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65499C182561A64400C14DD6 /* Monster.swift */; };
+		6573468025684259002212D7 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573467F25684259002212D7 /* GameController.swift */; };
 		65A4DDC82565A9F500F03C86 /* Quests in Resources */ = {isa = PBXBuildFile; fileRef = 65A4DDC72565A9F500F03C86 /* Quests */; };
 		65A4DDCC2565AD0F00F03C86 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4DDCB2565AD0F00F03C86 /* Quest.swift */; };
 		65A4DDCF2565AF5200F03C86 /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4DDCE2565AF5200F03C86 /* Chest.swift */; };
@@ -26,9 +27,11 @@
 		65C46D432566627700B82911 /* ChestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C46D422566627700B82911 /* ChestType.swift */; };
 		65C46D462566948100B82911 /* QuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C46D452566948100B82911 /* QuestTableViewCell.swift */; };
 		65C46D512566EB0600B82911 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65C46D532566EB0600B82911 /* Localizable.strings */; };
+		EF62B8CB95BE23C04B40C3EF /* Pods_Descent_AI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CFEA173E47D3A4280539A0 /* Pods_Descent_AI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52CFEA173E47D3A4280539A0 /* Pods_Descent_AI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Descent_AI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65499BEB25618DE700C14DD6 /* Descent_AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Descent_AI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65499BEE25618DE700C14DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65499BF025618DE700C14DD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 		65499C112561A50B00C14DD6 /* OverLord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverLord.swift; sourceTree = "<group>"; };
 		65499C152561A59600C14DD6 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		65499C182561A64400C14DD6 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		6573467F25684259002212D7 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		65A4DDC72565A9F500F03C86 /* Quests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Quests; sourceTree = "<group>"; };
 		65A4DDCB2565AD0F00F03C86 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		65A4DDCE2565AF5200F03C86 /* Chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		65C46D452566948100B82911 /* QuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTableViewCell.swift; sourceTree = "<group>"; };
 		65C46D522566EB0600B82911 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65C46D552566EB0B00B82911 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9406543E9FE3B7FBFC6007DE /* Pods-Descent_AI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Descent_AI.release.xcconfig"; path = "Target Support Files/Pods-Descent_AI/Pods-Descent_AI.release.xcconfig"; sourceTree = "<group>"; };
+		E817861DEEB376E6C0CDFD06 /* Pods-Descent_AI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Descent_AI.debug.xcconfig"; path = "Target Support Files/Pods-Descent_AI/Pods-Descent_AI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +66,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF62B8CB95BE23C04B40C3EF /* Pods_Descent_AI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17209E8339A0C3654D2BDD40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52CFEA173E47D3A4280539A0 /* Pods_Descent_AI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B35F96DED98BE049D3563D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E817861DEEB376E6C0CDFD06 /* Pods-Descent_AI.debug.xcconfig */,
+				9406543E9FE3B7FBFC6007DE /* Pods-Descent_AI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		65499BE225618DE600C14DD6 = {
 			isa = PBXGroup;
 			children = (
 				65499BED25618DE700C14DD6 /* Descent_AI */,
 				65499BEC25618DE700C14DD6 /* Products */,
+				2B35F96DED98BE049D3563D4 /* Pods */,
+				17209E8339A0C3654D2BDD40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +156,7 @@
 			children = (
 				65499BF225618DE700C14DD6 /* MainMenuController.swift */,
 				65AAAC40256309040068D20C /* SelectQuestController.swift */,
+				6573467F25684259002212D7 /* GameController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -140,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65499BFF25618DE900C14DD6 /* Build configuration list for PBXNativeTarget "Descent_AI" */;
 			buildPhases = (
+				86B3A7F72A284CDB75FFF33D /* [CP] Check Pods Manifest.lock */,
 				65499BE725618DE700C14DD6 /* Sources */,
 				65499BE825618DE700C14DD6 /* Frameworks */,
 				65499BE925618DE700C14DD6 /* Resources */,
+				920923821C491F809FDE490B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +232,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		86B3A7F72A284CDB75FFF33D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Descent_AI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		920923821C491F809FDE490B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Descent_AI/Pods-Descent_AI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Descent_AI/Pods-Descent_AI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Descent_AI/Pods-Descent_AI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		65499BE725618DE700C14DD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -220,6 +292,7 @@
 				65499BEF25618DE700C14DD6 /* AppDelegate.swift in Sources */,
 				65499BF125618DE700C14DD6 /* SceneDelegate.swift in Sources */,
 				65499C0B25619E0500C14DD6 /* Card.swift in Sources */,
+				6573468025684259002212D7 /* GameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +449,7 @@
 		};
 		65499C0025618DE900C14DD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E817861DEEB376E6C0CDFD06 /* Pods-Descent_AI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -395,6 +469,7 @@
 		};
 		65499C0125618DE900C14DD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9406543E9FE3B7FBFC6007DE /* Pods-Descent_AI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
