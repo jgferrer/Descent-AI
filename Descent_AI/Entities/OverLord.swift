@@ -9,25 +9,30 @@ import Foundation
 
 struct OverLord {
     var threat = 0
+    var threat_power = 0
+    var threat_spawn = 0
+    var threat_trap = 0
+    
+    var heroes_count = 4
     var conquest_tokens = 0
     
-    var fullDeck = [Card]()
-    var deck = [Card]()
-    var hand = [Card]()
-    var discard = [Card]()
-    var table = [Card]()
+    var fullDeck = [Card]()     // Todas las cartas de Overlord
+    var deck = [Card]()         // Las cartas que quedan en el mazo
+    var hand = [Card]()         // Las cartas que tiene el Overlord en la mano (se usa para colocar en su respectivo hueco)
+    var discard = [Card]()      // La pila de descartes
+    var table = [Card]()        // Las cartas que hay sobre la mesa:
+                                //      Trampas a la espera de ser activadas
+                                //      Generaciones a la espera de tener linea de visión
+                                //      Poderes activados
     
-    // Constantes
-    // Estas variables representan el valor de amenaza que debe tener
-    // el señor supremo  para poder jugar una carta del tipo definido
-    // Cuanto más bajo, antes usará la carta
-    let TRAP_DOOR_CHANCE = 25
-    let TRAP_CHEST_CHANCE = 25
-    let TRAP_SPACE_CHANCE = 25
-    let TRAP_CHANCE = 25
-    let EVENT_CHANCE = 25
-    let SPAWN_CHANCE = 25
-    let POWER_CHANCE = 8
+    // Los huecos en los que se pondrán cartas.
+    // El de Poder sólo podrá tener 1 carta, si ya hay una carta deberemos descartar por amenaza la que hayamos robado
+    // El de Generación podrá tener hasta 3 cartas, la cuarta sería descartada por amenaza
+    // El de Trampa sólo podrá tener 1 carta, si ya hay una carta deberemos descartar por amenaza la que hayamos robado
+    var power_pile = [Card]()
+    var spawn_pile = [Card]()
+    var trap_pile = [Card]()
+    
     
     mutating func init_deck(){
         // Inicializar el mazo de cartas del Señor Supremo
@@ -48,7 +53,53 @@ struct OverLord {
         self.threat = 0
         draw_card()
         draw_card()
+    }
+    
+    mutating func overlord_turn(){
+        // 1. Robar amenaza (tantas fichas como héroes en juego) y se ponen en el Contador Amenaza (ContadorAmenaza += NumeroHeroes)
+        self.threat += self.heroes_count
+        
+        // 2. Robar 2 cartas y se colocan en los Espacios correspondientes
         draw_card()
+        draw_card()
+        
+        // 3. Repartir Contador Amenaza en los Espacios Carta en partes iguales, las que sobren se quedan en el Contador Amenaza.
+        if (self.threat >= 3){
+            let threat_tmp = Int(self.threat / 3)
+            self.threat_power += threat_tmp
+            self.threat_spawn += threat_tmp
+            self.threat_trap += threat_tmp
+            self.threat -= threat_tmp*3
+        }
+        
+        // 4. Para cada Espacio, si podemos pagar el valor de la carta, la invocamos
+        //      --- PODER ---
+        if (power_pile.count>0 && power_pile[0].play_cost <= threat_power){
+            print ("Juego la carta: ", power_pile[0].name)
+            self.threat_power -= self.power_pile[0].play_cost
+            self.table.append(power_pile[0])
+            self.power_pile.remove(at: 0)
+        }
+        
+        //      --- GENERACION ---
+        spawnLoop:
+        for card in spawn_pile {
+            if (card.play_cost <= threat_spawn){
+                print ("Juego la carta: ", card.name)
+                self.threat_spawn -= card.play_cost
+                self.table.append(card)
+                spawn_pile.remove(at: spawn_pile.firstIndex(where: {$0.id == card.id})!)
+                break spawnLoop
+            }
+        }
+        
+        //      --- TRAMPA ---
+        if (trap_pile.count>0 && trap_pile[0].play_cost <= threat_trap){
+            print ("Juego la carta: ", trap_pile[0].name)
+            self.threat_trap -= self.trap_pile[0].play_cost
+            self.table.append(trap_pile[0])
+            self.trap_pile.remove(at: 0)
+        }
     }
     
     mutating func draw_card() {
@@ -56,48 +107,28 @@ struct OverLord {
         self.hand.append(self.deck[number])
         self.deck.remove(at: number)
         
-        // Si hay más de 8 cartas en la mano hay que descartar...
-        while(self.hand.count > 8){
-            var low = 0, med = 0, high = 0
-            for i in 0..<self.hand.count {
-                if(self.hand[i].play_cost<5){
-                    low+=1
-                }
-                else if(self.hand[i].play_cost<15){
-                    med+=1;
-                }
-                else{
-                    high+=1
-                }
-            }
-            if(high > 1){
-                discardCard(count: high, low: 15, high: 30);
-            }
-            else if(med > 3){
-                discardCard(count: med, low: 5, high: 14);
-            }
-            else if(low > 4){
-                discardCard(count: low, low: 1, high: 4);
-            }
+        // Colocar carta en su pila correspondiente o descartar por amenza?
+        if (self.hand[0].type==CardType.power.rawValue && power_pile.count == 0)
+        {
+            self.power_pile.append(self.hand[0])
         }
-    }
-    
-    // Descartar una carta aleatoria que esté dentro del rango de coste de invocación pasado
-    mutating func discardCard(count: Int, low: Int, high: Int){
-        var temp = Int.random(in: 1...count)
-        discardLoop:
-        for var i in 0..<self.hand.count-1{
-            if(low <= self.hand[i].play_cost && self.hand[i].play_cost <= high){
-                if(temp == 1){
-                    self.discard.append(self.hand[i])
-                    self.threat += self.hand[i].sell_cost
-                    self.hand.remove(at: i)
-                    break discardLoop
-                }
-                temp-=1
-            }
-            i+=1
+        else if(self.hand[0].type==CardType.spawn.rawValue && spawn_pile.count <= 2)
+        {
+            self.spawn_pile.append(self.hand[0])
         }
+        else if ((self.hand[0].type==CardType.trap.rawValue ||
+                        self.hand[0].type==CardType.trap_chest.rawValue ||
+                        self.hand[0].type==CardType.trap_door.rawValue)
+                    && trap_pile.count == 0)
+        {
+            self.trap_pile.append(self.hand[0])
+        }
+        else
+        {
+            self.threat += self.hand[0].sell_cost
+            self.discard.append(self.hand[0])
+        }
+        
+        self.hand.remove(at: 0)
     }
-    
 }

@@ -1,8 +1,8 @@
 {
     "quest_id": "La_cueva_perdida",
     "lang": "es",
-    "estimated_duration": "90 min",
-    "recomended_players": "1-4",
+    "estimated_duration": "120 min",
+    "recomended_players": "2-4",
     "name": "La cueva perdida",
     "sceneback": "De vuelta a casa decides tomar un atajo ya que el camino principal está repleto de carruajes que se dirigen a la fiesta del rey. Al tercer día, encuentras un rastro de grandes huellas que se dirigen hacia las colinas. La curiosidad se apodera de ti y sigues las huellas a través de unos senderos hasta llegar a un pequeño valle. El sendero termina en la entrada de una cueva oscura. Entras con cuidado...",
     "missgoal": "Los héroes deben explorar por completo la cueva y derrotar al enemigo final.\nLos héroes empiezan con 3 fichas de Conquista.",

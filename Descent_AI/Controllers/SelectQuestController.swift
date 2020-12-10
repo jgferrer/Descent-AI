@@ -9,7 +9,6 @@ import UIKit
 
 class SelectQuestController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var overLord = OverLord()
     var quests = [Quest]()
     var all_quests = [Quest]()
     var selected_quest: Quest?
@@ -20,8 +19,6 @@ class SelectQuestController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        overLord.init_deck()
-        overLord.init_hand()
         
         playButton.isEnabled = false;
         
@@ -100,15 +97,16 @@ class SelectQuestController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func playButton(_ sender: UIButton) {
         showInputDialog(title: NSLocalizedString("Number of Heroes", comment: "Number of Heroes"),
-                        subtitle: NSLocalizedString("Please enter the number of Heroes (1-4)", comment: "Number of Heroes Subtitle"),
+                        subtitle: NSLocalizedString("Please enter the number of Heroes (2-4)", comment: "Number of Heroes Subtitle"),
                         actionTitle: NSLocalizedString("Play!", comment: "Play Button"),
                         cancelTitle: NSLocalizedString("Cancel", comment: "Cancel Button"),
-                        inputPlaceholder: NSLocalizedString("Heroes (1-4)", comment: "Heroes placeholder"),
+                        inputPlaceholder: NSLocalizedString("Heroes (2-4)", comment: "Heroes placeholder"),
                         inputKeyboardType: .numberPad, actionHandler:
                             { (input:String?) in
                                 if (input != "") {
                                     if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameController") as? GameController {
                                         vc.quest = self.selected_quest
+                                        vc.numberOfHeroes = Int(input!)!
                                         vc.modalPresentationStyle = .fullScreen
                                         self.present(vc, animated: false, completion: nil)
                                     }
@@ -119,7 +117,7 @@ class SelectQuestController: UIViewController, UITableViewDelegate, UITableViewD
     @objc func textFieldDidChange(textField:UITextField)
      {
         if let intValue = Int(textField.text!) {
-            if(intValue<1 || intValue>4){
+            if(intValue<2 || intValue>4){
                 textField.text = ""
             }
         } else {

@@ -11,6 +11,7 @@ import FontAwesome_swift
 
 class GameController: UIViewController {
     
+    var overLord = OverLord()
     var quest: Quest?
     var numberOfHeroes: Int = 0
     
@@ -31,6 +32,11 @@ class GameController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        overLord.init_deck()
+        overLord.init_hand()
+        overLord.heroes_count = numberOfHeroes
+        
         lblQuestName.text = quest?.name
         lblHeroMovement.text = NSLocalizedString("Hero movement", comment: "User informs that hero moves")
         lblOpenChest.text = NSLocalizedString("Open chest", comment: "Hero open chest")
@@ -55,6 +61,9 @@ class GameController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: false, completion: nil)
         }
+    }
+    @IBAction func EndTurn(_ sender: UIButton) {
+        overLord.overlord_turn()
     }
 }
 

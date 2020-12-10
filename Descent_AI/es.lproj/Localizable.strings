@@ -9,10 +9,10 @@
 "Duration: " = "Duración: ";
 " - Heroes: " = " - Héroes: ";
 "Number of Heroes" = "Número de Héroes";
-"Please enter the number of Heroes (1-4)" = "Por favor, indica el número de Héroes (1-4)";
+"Please enter the number of Heroes (2-4)" = "Por favor, indica el número de Héroes (2-4)";
 "Play!" = "Jugar!";
 "Cancel" = "Cancelar";
-"Heroes (1-4)" = "Héroes (1-4)";
+"Heroes (2-4)" = "Héroes (2-4)";
 "Hero movement" = "Héroe mueve";
 "Open chest" = "Abrir cofre";
 "Open door" = "Abrir puerta";

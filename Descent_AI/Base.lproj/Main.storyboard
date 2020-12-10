@@ -289,6 +289,9 @@
                                 <rect key="frame" x="944" y="658" width="30" height="54"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="EndTurn:" destination="CR7-PL-M3C" eventType="touchUpInside" id="FrQ-B4-1v6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZI0-U7-0xh">
                                 <rect key="frame" x="926.5" y="727" width="65" height="21"/>
