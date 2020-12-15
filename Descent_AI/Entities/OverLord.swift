@@ -125,10 +125,19 @@ struct OverLord {
         }
         else
         {
-            self.threat += self.hand[0].sell_cost
+            if (self.heroes_count == 4 || self.hand[0].sell_cost<=2){
+	            self.threat += self.hand[0].sell_cost
+            }
+            else {
+	            if (self.heroes_count == 3){
+		            self.threat += self.hand[0].sell_cost-1
+	            } 
+	            else {
+		            self.threat += self.hand[0].sell_cost-2
+	            }
+            }
             self.discard.append(self.hand[0])
         }
-        
         self.hand.remove(at: 0)
     }
 }
