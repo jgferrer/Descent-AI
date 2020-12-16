@@ -33,7 +33,6 @@ struct OverLord {
     var spawn_pile = [Card]()
     var trap_pile = [Card]()
     
-    
     mutating func init_deck(){
         // Inicializar el mazo de cartas del Señor Supremo
         let url = Bundle.main.url(forResource: "cards", withExtension: "json")!
@@ -76,6 +75,9 @@ struct OverLord {
         //      --- PODER ---
         if (power_pile.count>0 && power_pile[0].play_cost <= threat_power){
             print ("Juego la carta: ", power_pile[0].name)
+            let playedCard = ["card": power_pile[0]]
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "playCard"), object: nil, userInfo: playedCard)
+            
             self.threat_power -= self.power_pile[0].play_cost
             self.table.append(power_pile[0])
             self.power_pile.remove(at: 0)
@@ -86,6 +88,9 @@ struct OverLord {
         for card in spawn_pile {
             if (card.play_cost <= threat_spawn){
                 print ("Juego la carta: ", card.name)
+                let playedCard = ["card": card]
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "playCard"), object: nil, userInfo: playedCard)
+                
                 self.threat_spawn -= card.play_cost
                 self.table.append(card)
                 spawn_pile.remove(at: spawn_pile.firstIndex(where: {$0.id == card.id})!)
@@ -96,6 +101,9 @@ struct OverLord {
         //      --- TRAMPA ---
         if (trap_pile.count>0 && trap_pile[0].play_cost <= threat_trap){
             print ("Juego la carta: ", trap_pile[0].name)
+            let playedCard = ["card": trap_pile[0]]
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "playCard"), object: nil, userInfo: playedCard)
+            
             self.threat_trap -= self.trap_pile[0].play_cost
             self.table.append(trap_pile[0])
             self.trap_pile.remove(at: 0)
@@ -103,6 +111,13 @@ struct OverLord {
     }
     
     mutating func draw_card() {
+        // En primer lugar miramos si hay cartas disponibles para robar.
+        // Si no las hay debemos usar los descartes y hacer un nuevo mazo
+        if (self.deck.count<1){
+            self.deck = self.discard
+            self.discard.removeAll()
+        }
+        
         let number = Int.random(in: 0..<self.deck.count)
         self.hand.append(self.deck[number])
         self.deck.remove(at: number)
