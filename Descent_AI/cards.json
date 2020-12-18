@@ -276,7 +276,7 @@
     	"sell_cost": 2,
     	"copies": 2,
     	"type": "event",
-    	"name": "Esquivar",
+    	"name": "Ráfaga de viento",
     	"text":	"Juega esta carta al comienzo de tu turno. Hasta el comienzo de tu próximo turno, las antorchas de loas héroes se apagan y no podrán trazar línea de visión más de 5 espacios de distancia. Esta carta no afecta a la línea de visión de los monstruos."
     },
     {
@@ -296,7 +296,7 @@
     	"sell_cost": 2,
     	"copies": 1,
     	"type": "spawn",
-    	"name": "Plaga de Arañas ponzoñosas",
+    	"name": "Manada de Sabuesos infernales",
     	"text":	"Juega esta carta antes de activar ninguno de tus monstruos en este turno. Puedes generar 2 Sabuesos infernales, siguiendo las reglas normales de generación de monstruos."
     },
     {
@@ -312,11 +312,11 @@
 	{
 		"id": 16,
     	"lang": "es",
-    	"play_cost": 25,
+    	"play_cost": 18,
     	"sell_cost": 5,
     	"copies": 2,
     	"type": "power",
-    	"name": "Genio maligno",
+    	"name": "Horda de seres",
     	"text":	"Juega esta carta al comienzo de tu turno y colócala boca arriba frente a ti. Cuando reveles una nueva zona, puedes elegir entre colocar 2 Hombres bestia adicionales, 2 Esqueletos adicionales o 2 Arañas ponzoñosas adicionales en un espacio adyacente a cualquier otro monstruo que haya en la zona."
     },
     {

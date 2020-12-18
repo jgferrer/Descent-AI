@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		65C46D432566627700B82911 /* ChestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C46D422566627700B82911 /* ChestType.swift */; };
 		65C46D462566948100B82911 /* QuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C46D452566948100B82911 /* QuestTableViewCell.swift */; };
 		65C46D512566EB0600B82911 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65C46D532566EB0600B82911 /* Localizable.strings */; };
+		65C9105C258CDF4C00493AC0 /* Cards in Resources */ = {isa = PBXBuildFile; fileRef = 65C9105B258CDF4C00493AC0 /* Cards */; };
 		EF62B8CB95BE23C04B40C3EF /* Pods_Descent_AI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CFEA173E47D3A4280539A0 /* Pods_Descent_AI.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		65C46D452566948100B82911 /* QuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTableViewCell.swift; sourceTree = "<group>"; };
 		65C46D522566EB0600B82911 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65C46D552566EB0B00B82911 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65C9105B258CDF4C00493AC0 /* Cards */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cards; sourceTree = "<group>"; };
 		9406543E9FE3B7FBFC6007DE /* Pods-Descent_AI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Descent_AI.release.xcconfig"; path = "Target Support Files/Pods-Descent_AI/Pods-Descent_AI.release.xcconfig"; sourceTree = "<group>"; };
 		E817861DEEB376E6C0CDFD06 /* Pods-Descent_AI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Descent_AI.debug.xcconfig"; path = "Target Support Files/Pods-Descent_AI/Pods-Descent_AI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +89,6 @@
 				E817861DEEB376E6C0CDFD06 /* Pods-Descent_AI.debug.xcconfig */,
 				9406543E9FE3B7FBFC6007DE /* Pods-Descent_AI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -112,6 +113,7 @@
 		65499BED25618DE700C14DD6 /* Descent_AI */ = {
 			isa = PBXGroup;
 			children = (
+				65C9105B258CDF4C00493AC0 /* Cards */,
 				65499BEE25618DE700C14DD6 /* AppDelegate.swift */,
 				65499BF025618DE700C14DD6 /* SceneDelegate.swift */,
 				65499BF425618DE700C14DD6 /* Main.storyboard */,
@@ -226,6 +228,7 @@
 				65499BFB25618DE900C14DD6 /* LaunchScreen.storyboard in Resources */,
 				65499BF825618DE900C14DD6 /* Assets.xcassets in Resources */,
 				65499BF625618DE700C14DD6 /* Main.storyboard in Resources */,
+				65C9105C258CDF4C00493AC0 /* Cards in Resources */,
 				65499C0425618E2500C14DD6 /* cards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

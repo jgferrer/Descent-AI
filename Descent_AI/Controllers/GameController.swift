@@ -40,9 +40,10 @@ class GameController: UIViewController {
                                                name: NSNotification.Name(rawValue: "playCard"),
                                                object: nil)
         
+        overLord.heroes_count = numberOfHeroes
         overLord.init_deck()
         overLord.init_hand()
-        overLord.heroes_count = numberOfHeroes
+        
         txtGameEvents.text = ""
         
         lblQuestName.text = quest?.name
