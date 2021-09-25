@@ -55,12 +55,18 @@ struct OverLord {
     }
     
     mutating func overlord_turn(){
+        var playedCards = [Card]()
+        
         // 1. Robar amenaza (tantas fichas como héroes en juego) y se ponen en el Contador Amenaza (ContadorAmenaza += NumeroHeroes)
         self.threat += self.heroes_count
         
         // 2. Robar 2 cartas y se colocan en los Espacios correspondientes
         draw_card()
         draw_card()
+        // Si la carta Evil Genius (id: 11) está en juego robará una carta adicional
+        if (self.table.contains(where: {$0.id == 11})){
+            draw_card()
+        }
         
         // 3. Repartir Contador Amenaza en los Espacios Carta en partes iguales, las que sobren se quedan en el Contador Amenaza.
         if (self.threat >= 3){
@@ -75,9 +81,7 @@ struct OverLord {
         //      --- PODER ---
         if (power_pile.count>0 && power_pile[0].play_cost <= threat_power){
             print ("Juego la carta: ", power_pile[0].name)
-            let playedCard = ["card": power_pile[0]]
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "playCard"), object: nil, userInfo: playedCard)
-            
+            playedCards.append(power_pile[0])
             self.threat_power -= self.power_pile[0].play_cost
             self.table.append(power_pile[0])
             self.power_pile.remove(at: 0)
@@ -88,9 +92,7 @@ struct OverLord {
         for card in spawn_pile {
             if (card.play_cost <= threat_spawn){
                 print ("Juego la carta: ", card.name)
-                let playedCard = ["card": card]
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "playCard"), object: nil, userInfo: playedCard)
-                
+                playedCards.append(card)
                 self.threat_spawn -= card.play_cost
                 self.table.append(card)
                 spawn_pile.remove(at: spawn_pile.firstIndex(where: {$0.id == card.id})!)
@@ -99,15 +101,21 @@ struct OverLord {
         }
         
         //      --- TRAMPA ---
-        if (trap_pile.count>0 && trap_pile[0].play_cost <= threat_trap){
+        // Si la carta Trapmaster (id: 24) está en juego hay que restar 1 a play_cost
+        let trapMaster = (self.table.contains(where: {$0.id == 24}) ? 1 : 0)
+        if (trap_pile.count>0 && (trap_pile[0].play_cost - trapMaster) <= threat_trap){
             print ("Juego la carta: ", trap_pile[0].name)
-            let playedCard = ["card": trap_pile[0]]
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "playCard"), object: nil, userInfo: playedCard)
-            
+            playedCards.append(trap_pile[0])
             self.threat_trap -= self.trap_pile[0].play_cost
             self.table.append(trap_pile[0])
             self.trap_pile.remove(at: 0)
         }
+        
+        if (playedCards.count > 0){
+            let userInfo = ["cards": playedCards]
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "playCard"), object: nil, userInfo: userInfo)
+        }
+        
     }
     
     mutating func draw_card() {

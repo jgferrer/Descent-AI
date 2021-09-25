@@ -7,4 +7,5 @@ target 'Descent_AI' do
 
   # Pods for Descent_AI
   pod 'FontAwesome.swift'
+  pod 'EzPopup'
 end

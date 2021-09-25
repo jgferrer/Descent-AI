@@ -24,6 +24,7 @@
 		65A4DDCC2565AD0F00F03C86 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4DDCB2565AD0F00F03C86 /* Quest.swift */; };
 		65A4DDCF2565AF5200F03C86 /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A4DDCE2565AF5200F03C86 /* Chest.swift */; };
 		65AAAC41256309040068D20C /* SelectQuestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AAAC40256309040068D20C /* SelectQuestController.swift */; };
+		65B3D29325912A81000E9422 /* ShowCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B3D29225912A81000E9422 /* ShowCardController.swift */; };
 		65C46D432566627700B82911 /* ChestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C46D422566627700B82911 /* ChestType.swift */; };
 		65C46D462566948100B82911 /* QuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C46D452566948100B82911 /* QuestTableViewCell.swift */; };
 		65C46D512566EB0600B82911 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65C46D532566EB0600B82911 /* Localizable.strings */; };
@@ -54,6 +55,7 @@
 		65A4DDCE2565AF5200F03C86 /* Chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
 		65AAAC3E2563081E0068D20C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		65AAAC40256309040068D20C /* SelectQuestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestController.swift; sourceTree = "<group>"; };
+		65B3D29225912A81000E9422 /* ShowCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCardController.swift; sourceTree = "<group>"; };
 		65C46D422566627700B82911 /* ChestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestType.swift; sourceTree = "<group>"; };
 		65C46D452566948100B82911 /* QuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTableViewCell.swift; sourceTree = "<group>"; };
 		65C46D522566EB0600B82911 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				65499BF225618DE700C14DD6 /* MainMenuController.swift */,
 				65AAAC40256309040068D20C /* SelectQuestController.swift */,
 				6573467F25684259002212D7 /* GameController.swift */,
+				65B3D29225912A81000E9422 /* ShowCardController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				65499C192561A64400C14DD6 /* Monster.swift in Sources */,
 				65C46D462566948100B82911 /* QuestTableViewCell.swift in Sources */,
 				65499BF325618DE700C14DD6 /* MainMenuController.swift in Sources */,
+				65B3D29325912A81000E9422 /* ShowCardController.swift in Sources */,
 				65499C0F2561A49600C14DD6 /* Game.swift in Sources */,
 				65499C122561A50B00C14DD6 /* OverLord.swift in Sources */,
 				65499C162561A59600C14DD6 /* CardType.swift in Sources */,

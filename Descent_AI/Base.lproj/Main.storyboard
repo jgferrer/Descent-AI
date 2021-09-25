@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -223,6 +223,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2g-uC-Lir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="833.7890625" y="87.5"/>
+        </scene>
+        <!--Show Card Controller-->
+        <scene sceneID="t8j-2R-zkg">
+            <objects>
+                <viewController storyboardIdentifier="showCardVC" id="sGa-e2-NzC" customClass="ShowCardController" customModule="Descent_AI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AU4-bS-5ed">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="550"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sEo-xr-nkA">
+                                <rect key="frame" x="25" y="8" width="350" height="475"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="475" id="Jwx-SZ-Rt9"/>
+                                    <constraint firstAttribute="width" constant="350" id="rJL-aJ-bDs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CSl-xD-Mxf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sEo-xr-nkA" firstAttribute="centerX" secondItem="AU4-bS-5ed" secondAttribute="centerX" id="TRe-7l-khT"/>
+                            <constraint firstItem="sEo-xr-nkA" firstAttribute="top" secondItem="CSl-xD-Mxf" secondAttribute="top" constant="8" id="Ypa-xh-26f"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="400" height="550"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="550"/>
+                    <connections>
+                        <outlet property="cardImage" destination="sEo-xr-nkA" id="Nig-Pb-zJP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ci-QN-mex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550" y="-541"/>
         </scene>
         <!--Game Controller-->
         <scene sceneID="P9N-0z-u7Z">

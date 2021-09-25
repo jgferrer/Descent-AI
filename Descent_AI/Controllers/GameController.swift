@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FontAwesome_swift
+import EzPopup
 
 class GameController: UIViewController {
     
@@ -15,6 +16,7 @@ class GameController: UIViewController {
     var quest: Quest?
     var numberOfHeroes: Int = 0
     var turn: Int = 0
+    var playedCards = [Card]()
     
     @IBOutlet weak var lblQuestName: UILabel!
     
@@ -68,7 +70,6 @@ class GameController: UIViewController {
         btnEncounter.setTitle(String.fontAwesomeIcon(name: .questionCircle), for: .normal)
         btnEndTurn.titleLabel?.font = UIFont.fontAwesome(ofSize: 45, style: .solid)
         btnEndTurn.setTitle(String.fontAwesomeIcon(name: .arrowCircleRight), for: .normal)
-        
     }
     @IBAction func btnVolver(_ sender: Any) {
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectQuestController") as? SelectQuestController {
@@ -85,9 +86,55 @@ class GameController: UIViewController {
     }
     
     @objc func playCard(_ notification: Notification) {
-        if let target = notification.userInfo?["card"] as? Card {
-            txtGameEvents.text = txtGameEvents.text + "\nCarta jugada: " + target.name
-          }
+        if let playedCards = notification.userInfo?["cards"] as? [Card]
+        {
+            self.playedCards = playedCards
+            showCards()
+        }
+    }
+    
+    func showCards(){
+        guard let card = playedCards.first else { return }
+        playedCards.remove(at: playedCards.firstIndex(where: {$0.id == card.id})!)
+        //showCard(card: card)
+        showCard2(card: card)
+    }
+    
+    func showCard2(card: Card){
+        if let contentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "showCardVC") as? ShowCardController {
+            contentVC.card = card
+            let showCardVC = PopupViewController(contentController: contentVC, popupWidth: 400, popupHeight: 550)
+            showCardVC.backgroundAlpha = 0.3
+            showCardVC.backgroundColor = .black
+            showCardVC.canTapOutsideToDismiss = true
+            showCardVC.cornerRadius = 10
+            showCardVC.shadowEnabled = true
+            present(showCardVC, animated: true)
+        }
+    }
+    
+    func showCard(card: Card){
+        let showAlert = UIAlertController(title: "Carta jugada", message: nil, preferredStyle: .alert)
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 50, width: 250, height: 400))
+        
+        let url = Bundle.main.url(forResource: "#" + "\(card.id)", withExtension: "png", subdirectory: "Cards/es")
+        let data = try? Data(contentsOf: url!)
+        imageView.image = UIImage(data: data!)
+        showAlert.view.addSubview(imageView)
+        
+        let height:NSLayoutConstraint = NSLayoutConstraint(item: showAlert.view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 500)
+        showAlert.view.addConstraint(height)
+        
+        showAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.showCards()
+        }))
+        showAlert.addAction(UIAlertAction(title: "Can't play", style: .default, handler: { action in
+            self.showCards()
+        }))
+        
+        self.present(showAlert, animated: true, completion: nil)
+        txtGameEvents.text = txtGameEvents.text + "\nCarta jugada: " + card.name
+        let bottom = NSMakeRange(txtGameEvents.text.count - 1, 1)
+        txtGameEvents.scrollRangeToVisible(bottom)
     }
 }
-
